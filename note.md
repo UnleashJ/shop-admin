@@ -71,3 +71,14 @@ module.exports = {
  extends: ['@commitlint/config-conventional']
 
 }
+
+commitlint.config.js
+
+
+
+## Vite
+
+[官网](https://cn.vitejs.dev/)
+
+
+
