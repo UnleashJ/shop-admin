@@ -41,9 +41,33 @@ extends: [
 
 ### git commit hook
 
-在进行git提交操作时，执行的钩子函数（可以自动执行lint命令）。
+在进行git提交操作时，执行的钩子函数（可以自动执行lint命令）。执行以下命令，安装lint-staged、[husky](https://github.com/typicode/husky)
 
 ```
 npx mrm@2 lint-staged
 ```
 
+`package.json`添加配置
+
+```json
+"lint-staged": {
+    "*.{js,jsx,ts,tsx}":[
+      "npm run lint",
+      "git add"
+    ]
+  }
+```
+
+### eslint vite 插件推荐
+
+[插件地址](https://github.com/gxmari007/vite-plugin-eslint)
+
+### git commit message
+
+[推荐工具](https://github.com/conventional-changelog/commitlint)
+
+module.exports = {
+
+ extends: ['@commitlint/config-conventional']
+
+}
